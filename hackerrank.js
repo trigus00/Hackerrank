@@ -1,19 +1,13 @@
 // console.log('Hello world ')
-function compareTriplets(a, b) {
-    let aSum = 0;
-    let bSum = 0;
-    let total = []; 
+function aVeryBigSum(ar) {
+    let sum = 0;
     // Write your code here
-    for(let i = 0; i < a.length & i<b.length ; i++){
-        if(a[i]>b[i]){
-            aSum+=1;
-        }
-        if(b[i]>a[i]){
-            bSum+=1
-        }
+    for(let i = 0; i < ar.length ; i++){
+        // console.log(ar[i])
+        sum = sum + ar[i]
     }
-    total.push(aSum,bSum)
-   console.log(total)
-}   
+    console.log(sum)
+}
 
-compareTriplets([5, 6, 7],[3,6,10]);
+
+aVeryBigSum([1000000001,1000000002,1000000003,1000000004,1000000005])
