@@ -1,13 +1,26 @@
 // console.log('Hello world ')
-function aVeryBigSum(ar) {
-    let sum = 0;
+function diagonalDifference(arr) {
     // Write your code here
-    for(let i = 0; i < ar.length ; i++){
-        // console.log(ar[i])
-        sum = sum + ar[i]
+   
+        // Write your code here
+        let right = 0 ;
+        let left = 0 
+        for (let i = 0 ; i< arr.length;i++){
+            for(let j = 0; j < arr.length;j++){
+               if(i===j){
+                    right+= arr[i][j]
+               }
+               if( i+j == arr.length -1 ) {
+                   left += arr[i][j]
+               }
+               
+            }
+            
+        }
+        // console.log(arr)
+        console.log(Math.abs(right-left))
     }
-    console.log(sum)
-}
 
 
-aVeryBigSum([1000000001,1000000002,1000000003,1000000004,1000000005])
+diagonalDifference([[11, 2, 4],[4, 5, 6], [10, 8, -12]])
+
