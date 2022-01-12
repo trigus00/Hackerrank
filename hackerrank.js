@@ -1,20 +1,23 @@
 // console.log('Hello world ')
 
 
-function miniMaxSum(arr) {
+function birthdayCakeCandles(candles) {
+    // Write your code here
     let max = 0;
-    let min = 0;
-    let total = 0;
-    
-    max = Math.max(...arr)
-    min = Math.min(...arr)
+    let count = 0 
 
-    arr.reduce((previouseValue, currentValue) => total = currentValue + previouseValue, 0)
-    max = total - max;
-    min = total - min;
-    console.log(max, min)
-
+    for(let i = 0; i < candles.length; i++){
+        if(candles[i] > max){
+            max = candles[i];
+        }
+    }
+    for(let j = 0; j < candles.length; j++){
+        if(candles[j] === max){
+            count ++
+        }
+    }
+console.log(count)
 }
-miniMaxSum([256741038, 623958417, 467905213, 714532089, 938071625])
-// let total = [1,2,3,4,5].reduce((previouseValue,currentValue)=>currentValue+previouseValue,0)
-// console.log(total)
+
+birthdayCakeCandles([18,90,90,13,90,75,90,8,90,43])
+// 13,90,75,90,8,90,43
