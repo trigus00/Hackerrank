@@ -1,23 +1,21 @@
 // console.log('Hello world ')
+let hh = '';
+let h12 = '';
+let h24  = ''
 
-
-function birthdayCakeCandles(candles) {
+function timeConversion(s) {
     // Write your code here
-    let max = 0;
-    let count = 0 
-
-    for(let i = 0; i < candles.length; i++){
-        if(candles[i] > max){
-            max = candles[i];
-        }
+    let AmPm = s.slice(-2)
+    let time = s.slice(0,-2).split(":");
+    if(AmPm === 'AM' && time[0] == '12'){
+        time[00] = '00'
+        console.log('here')
+    }else if(AmPm == 'PM'){
+        console.log(time[0]%12)
+        time[0] = (time[0]%12)+12 
     }
-    for(let j = 0; j < candles.length; j++){
-        if(candles[j] === max){
-            count ++
-        }
-    }
-console.log(count)
+    console.log(time.join(':'))
+   
+    // console.log(typeof AmPm)
 }
-
-birthdayCakeCandles([18,90,90,13,90,75,90,8,90,43])
-// 13,90,75,90,8,90,43
+timeConversion('07:05:45PM')
