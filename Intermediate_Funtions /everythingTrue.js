@@ -1,7 +1,7 @@
 function truthCheck(collection, pre) {
     let counter = 0; 
     for(let c in collection ){
-      console.log(collection[c][pre])
+    //   console.log(collection[c][pre])
       if(collection[c].hasOwnProperty(pre) && Boolean (collection[c][pre])){
         counter ++;
       }
